@@ -50,7 +50,7 @@ header{
   align-items:center;
   justify-content:space-between;
 
-  padding:0 60px;
+  padding:0 20px 0 20px;
 
   position:fixed;
   top:0;
@@ -76,6 +76,7 @@ header{
   0 0 10px var(--purple),
   0 0 20px var(--purple),
   0 0 40px var(--purple);
+  margin:  0 50px 0 0;
 }
 
 nav{
@@ -136,11 +137,10 @@ nav .active::after{
 /* HERO */
 
 .hero{
-    background-image: url(public/banner.png);
+  margin-top: 90px;
+  background-image: url(public/banner.png);
   width:100%;
   min-height:100vh;
-
-
 
  background-size: cover;
   background-position: center;
@@ -257,15 +257,6 @@ nav .active::after{
   text-align:center;
 }
 
-.welcome{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:20px;
-
-  margin-bottom:30px;
-}
-
 .small-line{
   width:80px;
   height:2px;
@@ -335,13 +326,17 @@ nav .active::after{
 /* BOX */
 
 .movement-box{
-  margin:50px auto 0;
+  margin: 50px auto 0;
 
   width:500px;
 
   display:flex;
   align-items:center;
   justify-content:center;
+  position: absolute;
+  top:63%;
+  left:50%;
+  transform:translate(-50%,-50%);
   gap:20px;
 
   padding:25px;
@@ -382,70 +377,327 @@ nav .active::after{
   color:var(--purpleLight);
 }
 
-/* RIGHT */
+/* =========================================
+   FEATURES LATERAL VELTRIX
+========================================= */
 
-.right-side{
+.features{
+
+  position:absolute;
+
+  top:5%;
+  right:15%;
+
   display:flex;
   flex-direction:column;
+
+  gap: 5px;
+
+  z-index:10;
+}
+
+/* ITEM */
+
+.feature-item{
+
+  display:flex;
   align-items:center;
-  gap:50px;
+
+  gap:5px;
+
+  transition:.4s ease;
 }
 
-.qualities{
-  display:flex;
-  flex-direction:column;
-  gap:25px;
+/* HOVER */
 
-  font-size:20px;
+.feature-item:hover{
+
+  transform:translateX(-8px);
+
 }
 
-.qualities strong{
-  color:var(--purpleLight);
-}
+/* ÍCONES */
 
-.bag img{
-  width:350px;
+.feature-item i{
+
+  font-size:46px;
+
+  color:#b300ff;
 
   filter:
-  brightness(.8)
-  drop-shadow(0 0 20px var(--purple))
-  drop-shadow(0 0 60px var(--purple));
+  drop-shadow(0 0 6px #b300ff)
+  drop-shadow(0 0 15px #b300ff)
+  drop-shadow(0 0 30px #7a00ff);
+
+  animation:iconGlow 2s infinite alternate;
 }
 
-/* BOTTOM */
+/* ANIMAÇÃO BRILHO */
+
+@keyframes iconGlow{
+
+  0%{
+
+    opacity:.8;
+
+    filter:
+    drop-shadow(0 0 4px #b300ff)
+    drop-shadow(0 0 12px #b300ff);
+
+  }
+
+  100%{
+
+    opacity:1;
+
+    filter:
+    drop-shadow(0 0 8px #d000ff)
+    drop-shadow(0 0 20px #b300ff)
+    drop-shadow(0 0 45px #7a00ff);
+
+  }
+
+}
+
+/* TEXTOS */
+
+.feature-text{
+
+  display:flex;
+  flex-direction:column;
+
+  gap:3px;
+}
+
+/* TEXTO SUPERIOR */
+
+.feature-text span{
+
+  color:#ffffff;
+
+  font-size:15px;
+
+  letter-spacing:2px;
+
+  text-transform:uppercase;
+
+  font-family:'Poppins',sans-serif;
+}
+
+/* TEXTO ROXO */
+
+.feature-text strong{
+
+  color:#bb00ff;
+
+  font-size:18px;
+
+  letter-spacing:1px;
+
+  text-transform:uppercase;
+
+  font-weight:700;
+
+  text-shadow:
+  0 0 5px #bb00ff,
+  0 0 10px #bb00ff,
+  0 0 25px #7a00ff;
+}
+
+
+
+/* =========================================
+   BARRA INFERIOR FUTURISTA VELTRIX
+========================================= */
 
 .bottom-bar{
+
   width:100%;
 
   display:grid;
   grid-template-columns:repeat(4,1fr);
 
-  gap:20px;
+  align-items:center;
 
-  padding:40px 60px;
+  padding:32px 60px;
+
+  background:rgba(0,0,0,.75);
 
   border-top:1px solid rgba(255,255,255,.05);
+
+  border-bottom:1px solid rgba(255,255,255,.05);
+
+  backdrop-filter:blur(10px);
+
+  position:relative;
+
+  overflow:hidden;
 }
 
-.item{
-  text-align:center;
+/* brilho de fundo */
 
-  padding:20px;
+.bottom-bar::before{
 
-  border-right:1px solid rgba(255,255,255,.08);
+  content:'';
 
-  font-size:18px;
-  line-height:1.8;
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+    90deg,
+    transparent,
+    rgba(162,0,255,.08),
+    transparent
+  );
+
+  animation:shine 6s linear infinite;
+}
+
+@keyframes shine{
+
+  0%{
+    transform:translateX(-100%);
+  }
+
+  100%{
+    transform:translateX(100%);
+  }
+
+}
+
+/* ITENS */
+
+.bottom-item{
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  gap:18px;
+
+  padding:20px 10px 20px 10px;
+
+  position:relative;
+}
+
+/* linha separadora */
+
+.bottom-item::after{
+
+  content:'';
+
+  position:absolute;
+
+  right:0;
+
+  width:1px;
+  height:50px;
+
+  background:
+  linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255,255,255,.15),
+    transparent
+  );
+}
+
+.bottom-item:last-child::after{
+  display:none;
+}
+
+/* ÍCONES */
+
+.bottom-item i{
+
+  font-size:42px;
+
+  color:#b100ff;
+
+  filter:
+  drop-shadow(0 0 5px #b100ff)
+  drop-shadow(0 0 12px #b100ff)
+  drop-shadow(0 0 25px #7b00ff);
+
+  animation:iconGlow 2s infinite alternate;
+}
+
+@keyframes iconGlow{
+
+  0%{
+    opacity:.8;
+  }
+
+  100%{
+
+    opacity:1;
+
+    filter:
+    drop-shadow(0 0 10px #d400ff)
+    drop-shadow(0 0 25px #b100ff)
+    drop-shadow(0 0 40px #7b00ff);
+
+  }
+
+}
+
+/* TEXTOS */
+
+.bottom-text{
+
+  display:flex;
+  flex-direction:column;
+
+  gap:4px;
+}
+
+.bottom-text span{
+
+  font-size:14px;
+
+  color:white;
+
+  letter-spacing:3px;
+
+  font-family:'Poppins',sans-serif;
+
+  text-transform:uppercase;
+
+  line-height:1.5;
+}
+
+/* hover */
+
+.bottom-item:hover{
+
+  background:rgba(140,0,255,.06);
 
   transition:.4s;
 }
 
-.item:hover{
+/* RESPONSIVO */
 
-  background:rgba(143,45,255,.08);
+@media(max-width:1000px){
 
-  box-shadow:
-  0 0 20px rgba(143,45,255,.2);
+  .bottom-bar{
+
+    grid-template-columns:1fr 1fr;
+
+    gap:20px;
+  }
+
+  .bottom-item::after{
+    display:none;
+  }
+
+}
+
+@media(max-width:700px){
+
+  .bottom-bar{
+    grid-template-columns:1fr;
+  }
 
 }
 
@@ -488,10 +740,6 @@ footer span{
     text-align:center;
   }
 
-  .movement-box{
-    width:100%;
-    max-width:500px;
-  }
 
 }
 
