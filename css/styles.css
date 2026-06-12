@@ -25,6 +25,121 @@ body{
 
 }
 
+/* INTRO */
+
+.intro{
+
+    position:fixed;
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#050505;
+
+    z-index:9999;
+
+    animation:hideIntro 3s forwards;
+}
+
+/* LOGO */
+
+.logo-intro{
+
+    display:flex;
+    gap:10px;
+
+    font-family:'Orbitron',sans-serif;
+    font-size:11rem;
+    font-weight:800;
+
+    color:white;
+}
+
+/* LETRAS */
+
+.letter{
+
+    opacity:0;
+
+    transform:translateY(80px) scale(.2);
+
+    animation:flashLetter .8s forwards;
+}
+
+/* DELAYS */
+
+.letter:nth-child(1){animation-delay:.2s;}
+.letter:nth-child(2){animation-delay:.6s;}
+.letter:nth-child(3){animation-delay:1s;}
+.letter:nth-child(4){animation-delay:1.4s;}
+.letter:nth-child(5){animation-delay:1.8s;}
+.letter:nth-child(6){animation-delay:2.2s;}
+.letter:nth-child(7){animation-delay:2.6s;}
+
+/* FLASH */
+
+@keyframes flashLetter{
+
+    0%{
+
+        opacity:0;
+
+        filter:
+        brightness(10)
+        blur(20px);
+
+        transform:
+        scale(.2);
+    }
+
+    50%{
+
+        opacity:1;
+
+        color:#d14dff;
+
+        text-shadow:
+        0 0 20px #b400ff,
+        0 0 40px #b400ff,
+        0 0 80px #b400ff,
+        0 0 150px #b400ff;
+    }
+
+    100%{
+
+        opacity:1;
+
+        color:white;
+
+        transform:
+        scale(1);
+
+        text-shadow:
+        0 0 15px #8f2dff,
+        0 0 30px #8f2dff;
+    }
+}
+
+/* ESCONDER INTRO */
+
+@keyframes hideIntro{
+
+    0%,85%{
+
+        opacity:1;
+        visibility:visible;
+    }
+
+    100%{
+
+        opacity:0;
+        visibility:hidden;
+    }
+
+}
+
 
 /* BACKGROUND */
 .background{
