@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Carrinho | Veltrix</title>
+
+    <link rel="stylesheet" href="/css/variavel.css">
+
+    <link rel="icon" href="/public/icone.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/feather-icons"></script>
+
+</head>
+
+<body>
+
+    <div class="background-glow"></div>
+
+  <a href="/pages/produtos.html" class="back-button">
+
+    ← Voltar para Produtos
+
+  </a>
+
+    <!-- CARRINHO -->
+
+    <section class="cart-page">
+
+        <!-- PRODUTOS -->
+
+        <div class="cart-left">
+
+            <div class="page-title">
+
+                <span>CARRINHO DE COMPRAS</span>
+
+                <h1>Meus Produtos</h1>
+
+            </div>
+
+            <!-- O JS INSERE OS PRODUTOS AQUI -->
+
+            <div id="cartItems"></div>
+
+        </div>
+
+        <!-- RESUMO -->
+
+        <div class="cart-right">
+
+            <h2>Resumo do Pedido</h2>
+
+            <div class="summary-row">
+
+                <span>Subtotal</span>
+
+                <span id="cartSubtotal">
+                    R$ 0,00
+                </span>
+
+            </div>
+
+            <div class="summary-row">
+
+                <span>Frete</span>
+
+                <span id="cartShipping">
+                    R$ 0,00
+                </span>
+
+            </div>
+
+            <!-- CUPOM -->
+
+            <div class="coupon">
+
+                <input
+                    type="text"
+                    id="coupon"
+                    placeholder="Digite seu cupom">
+
+                <button onclick="applyCoupon()">
+                    Aplicar
+                </button>
+
+            </div>
+
+            <p id="discountValue"></p>
+
+            <!-- FORMA DE PAGAMENTO -->
+
+            <div class="payment-method">
+
+                <label>Forma de Pagamento</label>
+
+                <select id="paymentMethod">
+
+                    <option value="card">
+                        Cartão
+                    </option>
+
+                    <option value="pix">
+                        PIX (10% OFF)
+                    </option>
+
+                </select>
+
+            </div>
+
+            <!-- TOTAL -->
+
+            <div class="total">
+
+                <span>Total</span>
+
+                <h3 id="cartTotal">
+                    R$ 0,00
+                </h3>
+
+            </div>
+
+            <button
+                class="checkout"
+                onclick="checkout()">
+
+                FINALIZAR COMPRA
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-line"></div>
+
+        <span>
+            VELTRIX.COM.BR
+        </span>
+
+        <div class="footer-line"></div>
+
+    </footer>
+
+    <script>
+        feather.replace();
+    </script>
+
+    <script src="/script/cart.js"></script>
+
+</body>
+
+</html>

@@ -38,12 +38,25 @@
 
    <div class="icons">
 
-      <i data-feather="search"></i>
-      <i data-feather="user"></i>
-      <i data-feather="shopping-bag"></i>
+    <a href="/pages/busca.html">
+        <i data-feather="search"></i>
+    </a>
+
+    <a href="/pages/login.html">
+        <i data-feather="user"></i>
+    </a>
+
+    <div class="cart-icon">
+
+        <a href="/pages/cart.html">
+            <i data-feather="shopping-bag"></i>
+        </a>
+
+        <span id="cartCount">0</span>
 
     </div>
 
+</div>
   </header>
 
     <section class="products-page">
@@ -70,113 +83,116 @@
 
   </div>
 
-  <div class="products-grid">
 
-    <!-- Produto -->
+    <div class="products-grid">
 
-    <div class="product-card">
+        <!-- PRODUTO 1 -->
 
-      <div class="badge">
-        -20%
-      </div>
+        <div class="product-card card" data-price="149.90">
 
-      <img
-      src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=900"
-      alt="">
+            <div class="badge">
+                -20%
+            </div>
 
-      <div class="product-info">
+            <img
+            src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=900"
+            alt="Camiseta Legacy">
 
-        <h3>Camiseta Legacy</h3>
+            <div class="product-info">
 
-        <p>
-          Edição Premium Veltrix
-        </p>
+                <h3>Camiseta Legacy</h3>
 
-        <div class="price">
+                <p>
+                    Edição Premium Veltrix
+                </p>
 
-          <span class="old">
-            R$ 199,90
-          </span>
+                <div class="price">
 
-          <span class="new">
-            R$ 149,90
-          </span>
+                    <span class="old">
+                        R$ 199,90
+                    </span>
 
-        </div>
+                    <span class="new">
+                        R$ 149,90
+                    </span>
 
-        <button>
-          Comprar Agora
-        </button>
+                </div>
 
-      </div>
+                <button>
+                    Comprar Agora
+                </button>
 
-    </div>
-
-    <!-- Produto -->
-
-    <div class="product-card">
-
-      <img
-      src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=900"
-      alt="">
-
-      <div class="product-info">
-
-        <h3>Tênis Velocity</h3>
-
-        <p>
-          Performance Premium
-        </p>
-
-        <div class="price">
-
-          <span class="new">
-            R$ 399,90
-          </span>
+            </div>
 
         </div>
 
-        <button>
-          Comprar Agora
-        </button>
+        <!-- PRODUTO 2 -->
 
-      </div>
+        <div class="product-card card" data-price="399.90">
 
-    </div>
+            <img
+            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=900"
+            alt="Tênis Velocity">
 
-    <!-- Produto -->
+            <div class="product-info">
 
-    <div class="product-card">
+                <h3>Tênis Velocity</h3>
 
-      <img
-      src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?w=900"
-      alt="">
+                <p>
+                    Performance Premium
+                </p>
 
-      <div class="product-info">
+                <div class="price">
 
-        <h3>Moletom Veltrix</h3>
+                    <span class="new">
+                        R$ 399,90
+                    </span>
 
-        <p>
-          Coleção Cyber
-        </p>
+                </div>
 
-        <div class="price">
+                <button>
+                    Comprar Agora
+                </button>
 
-          <span class="new">
-            R$ 249,90
-          </span>
+            </div>
 
         </div>
 
-        <button>
-          Comprar Agora
-        </button>
+        <!-- PRODUTO 3 -->
 
-      </div>
+        <div class="product-card card" data-price="249.90">
+
+            <img
+            src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?w=900"
+            alt="Moletom Veltrix">
+
+            <div class="product-info">
+
+                <h3>Moletom Veltrix</h3>
+
+                <p>
+                    Coleção Cyber
+                </p>
+
+                <div class="price">
+
+                    <span class="new">
+                        R$ 249,90
+                    </span>
+
+                </div>
+
+                <button>
+                    Comprar Agora
+                </button>
+
+            </div>
+
+        </div>
 
     </div>
 
-  </div>
+</section>
 
 </section>
 
@@ -189,9 +205,12 @@
     <div class="footer-line"></div>
 
   </footer>
-<script>
-  feather.replace();
-</script>
+
+
+<script>feather.replace();</script>
+ <script src="/script/cart.js"></script>
+ <script src="/script/produtos.js"></script>
+
 </body>
 
 </html>

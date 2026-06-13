@@ -245,3 +245,135 @@
   0 0 20px #b400ff,
   0 0 40px #b400ff;
 }
+
+/* =========================
+   CARRINHO
+========================= */
+
+.cart-icon{
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.cart-icon a{
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-decoration: none;
+
+    color: white;
+}
+
+.cart-icon svg{
+
+    width: 24px;
+    height: 24px;
+
+    stroke: white;
+
+    transition: .3s;
+}
+
+.cart-icon:hover svg{
+
+    stroke: #c44dff;
+
+    filter:
+    drop-shadow(0 0 5px #b400ff)
+    drop-shadow(0 0 15px #b400ff);
+}
+
+/* =========================
+   CONTADOR
+========================= */
+
+#cartCount{
+
+    position: absolute;
+
+    top: -8px;
+    right: -10px;
+
+    min-width: 22px;
+    height: 22px;
+
+    padding: 0 6px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50px;
+
+    background: linear-gradient(
+        135deg,
+        #8f2dff,
+        #d14dff
+    );
+
+    color: white;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    font-family: 'Poppins', sans-serif;
+
+    box-shadow:
+    0 0 10px #b400ff,
+    0 0 20px #b400ff,
+    0 0 40px rgba(180,0,255,.6);
+
+    animation: pulseCart 2s infinite;
+}
+
+/* =========================
+   ANIMAÇÃO
+========================= */
+
+@keyframes pulseCart{
+
+    0%{
+
+        transform: scale(1);
+
+        box-shadow:
+        0 0 10px #b400ff,
+        0 0 20px #b400ff;
+    }
+
+    50%{
+
+        transform: scale(1.15);
+
+        box-shadow:
+        0 0 20px #b400ff,
+        0 0 40px #b400ff,
+        0 0 60px #b400ff;
+    }
+
+    100%{
+
+        transform: scale(1);
+
+        box-shadow:
+        0 0 10px #b400ff,
+        0 0 20px #b400ff;
+    }
+}
