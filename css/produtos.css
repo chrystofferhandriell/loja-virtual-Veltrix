@@ -1,6 +1,108 @@
 
+/* ==========================
+   BUSCA OCULTA
+========================== */
 
+.search-container{
 
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+}
+
+.search-btn{
+
+    background:none;
+
+    border:none;
+
+    cursor:pointer;
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+}
+
+.search-btn svg{
+
+    width:22px;
+    height:22px;
+
+    transition:.3s;
+}
+
+.search-btn:hover svg{
+
+    color:#d14dff;
+
+    filter:
+    drop-shadow(0 0 10px #b400ff);
+}
+
+/* CAIXA ESCONDIDA */
+
+.search-box{
+
+    position:absolute;
+
+    right:35px;
+
+    width:0;
+
+    overflow:hidden;
+
+    opacity:0;
+
+    transition:
+    width .4s ease,
+    opacity .4s ease;
+
+    background:rgba(15,15,15,.95);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:30px;
+}
+
+/* QUANDO ABERTA */
+
+.search-box.active{
+
+    width:280px;
+
+    opacity:1;
+
+    border:1px solid rgba(180,0,255,.4);
+
+    box-shadow:
+    0 0 20px rgba(180,0,255,.3);
+}
+
+.search-box input{
+
+    width:100%;
+
+    padding:12px 18px;
+
+    border:none;
+
+    background:none;
+
+    color:white;
+
+    outline:none;
+}
+
+.search-box input::placeholder{
+
+    color:#888;
+}
 
 
 .products-page{

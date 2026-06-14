@@ -38,9 +38,24 @@
 
    <div class="icons">
 
-    <a href="/pages/busca.html">
+   <div class="search-container">
+
+    <button id="searchBtn" class="search-btn">
+
         <i data-feather="search"></i>
-    </a>
+
+    </button>
+
+    <div class="search-box" id="searchBox">
+
+        <input
+            type="text"
+            id="searchProduct"
+            placeholder="Pesquisar produtos...">
+
+    </div>
+
+</div>
 
     <a href="/pages/login.html">
         <i data-feather="user"></i>
@@ -61,34 +76,54 @@
 
     <section class="products-page">
 
-  <div class="page-title">
+    <div class="page-title">
 
-    <span>COLEÇÃO VELTRIX</span>
+        <span>COLEÇÃO VELTRIX</span>
 
-    <h1>Produtos Exclusivos</h1>
+        <h1>Produtos Exclusivos</h1>
 
-    <p>
-      Tecnologia, estilo e performance em cada detalhe.
-    </p>
+        <p>
+            Tecnologia, estilo e performance em cada detalhe.
+        </p>
 
-  </div>
+    </div>
 
-  <div class="filters">
+    <!-- FILTROS -->
 
-    <button class="active">Todos</button>
-    <button>Masculino</button>
-    <button>Feminino</button>
-    <button>Acessórios</button>
-    <button>Promoções</button>
+    <div class="filters">
 
-  </div>
+        <button class="active" data-filter="all">
+            Todos
+        </button>
 
+        <button data-filter="masculino">
+            Masculino
+        </button>
+
+        <button data-filter="feminino">
+            Feminino
+        </button>
+
+        <button data-filter="acessorios">
+            Acessórios
+        </button>
+
+        <button data-filter="promocao">
+            Promoções
+        </button>
+
+    </div>
+
+    <!-- PRODUTOS -->
 
     <div class="products-grid">
 
-        <!-- PRODUTO 1 -->
+        <!-- CAMISETA -->
 
-        <div class="product-card card" data-price="149.90">
+        <div
+        class="product-card card"
+        data-price="149.90"
+        data-category="masculino promocao">
 
             <div class="badge">
                 -20%
@@ -126,9 +161,12 @@
 
         </div>
 
-        <!-- PRODUTO 2 -->
+        <!-- TÊNIS -->
 
-        <div class="product-card card" data-price="399.90">
+        <div
+        class="product-card card"
+        data-price="399.90"
+        data-category="acessorios">
 
             <img
             src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=900"
@@ -158,9 +196,12 @@
 
         </div>
 
-        <!-- PRODUTO 3 -->
+        <!-- MOLETOM -->
 
-        <div class="product-card card" data-price="249.90">
+        <div
+        class="product-card card"
+        data-price="249.90"
+        data-category="masculino">
 
             <img
             src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?w=900"
@@ -190,9 +231,128 @@
 
         </div>
 
-    </div>
+        <!-- JAQUETA -->
 
-</section>
+        <div
+        class="product-card card"
+        data-price="499.90"
+        data-category="masculino promocao">
+
+            <div class="badge">
+                -15%
+            </div>
+
+            <img
+            src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=900"
+            alt="Jaqueta Veltrix">
+
+            <div class="product-info">
+
+                <h3>Jaqueta Neon X</h3>
+
+                <p>
+                    Edição Limitada
+                </p>
+
+                <div class="price">
+
+                    <span class="old">
+                        R$ 599,90
+                    </span>
+
+                    <span class="new">
+                        R$ 499,90
+                    </span>
+
+                </div>
+
+                <button>
+                    Comprar Agora
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- BOLSA -->
+
+        <div
+        class="product-card card"
+        data-price="189.90"
+        data-category="acessorios">
+
+            <img
+            src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=900"
+            alt="Bolsa Veltrix">
+
+            <div class="product-info">
+
+                <h3>Bolsa Urban Tech</h3>
+
+                <p>
+                    Coleção Street
+                </p>
+
+                <div class="price">
+
+                    <span class="new">
+                        R$ 189,90
+                    </span>
+
+                </div>
+
+                <button>
+                    Comprar Agora
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- CROPPED -->
+
+        <div
+        class="product-card card"
+        data-price="129.90"
+        data-category="feminino promocao">
+
+            <div class="badge">
+                -10%
+            </div>
+
+            <img
+            src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=900"
+            alt="Cropped Veltrix">
+
+            <div class="product-info">
+
+                <h3>Cropped Legacy</h3>
+
+                <p>
+                    Linha Feminina
+                </p>
+
+                <div class="price">
+
+                    <span class="old">
+                        R$ 149,90
+                    </span>
+
+                    <span class="new">
+                        R$ 129,90
+                    </span>
+
+                </div>
+
+                <button>
+                    Comprar Agora
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
@@ -210,7 +370,8 @@
 <script>feather.replace();</script>
  <script src="/script/cart.js"></script>
  <script src="/script/produtos.js"></script>
-
+ <script src="/script/produ-filtro.js"></script>
+ <script src="/script/produ-pesqui.js"></script>
 </body>
 
 </html>

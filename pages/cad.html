@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Criar Conta | Veltrix</title>
+
+<link rel="stylesheet" href="/css/cad.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="background-glow"></div>
+
+<section class="register-container">
+
+    <div class="register-card">
+
+        <div class="logo">
+            VELTR<span>IX</span>
+        </div>
+
+        <div class="register-top">
+
+            <h1>Criar Conta</h1>
+
+            <p>
+                Junte-se ao universo Veltrix
+            </p>
+
+        </div>
+
+        <form id="registerForm">
+
+            <div class="input-group">
+
+                <label>Nome Completo</label>
+
+                <input
+                type="text"
+                placeholder="Digite seu nome"
+                required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Email</label>
+
+                <input
+                type="email"
+                placeholder="Digite seu email"
+                required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Telefone</label>
+
+                <input
+                type="tel"
+                placeholder="(00) 00000-0000">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Senha</label>
+
+                <input
+                type="password"
+                placeholder="Crie uma senha"
+                required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Confirmar Senha</label>
+
+                <input
+                type="password"
+                placeholder="Confirme sua senha"
+                required>
+
+            </div>
+
+            <button type="submit">
+
+                CRIAR CONTA
+
+            </button>
+
+        </form>
+
+        <div class="divider">
+
+            <span>OU</span>
+
+        </div>
+
+        <div class="social-register">
+
+            <button>Google</button>
+
+        </div>
+
+        <div class="login-link">
+
+            Já possui conta?
+
+            <a href="/pages/login.html">
+                Entrar
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+
+document.getElementById("registerForm")
+.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    alert("Conta criada com sucesso!");
+
+});
+
+</script>
+
+</body>
+</html>
